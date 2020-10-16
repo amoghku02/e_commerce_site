@@ -1,0 +1,138 @@
+{% load static %}   
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=<h1>">
+    <link rel="stylesheet" href="{% static 'css/home_style.css'%}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Homepage</title>
+</head>
+<body>
+    <header class="hdr">
+        <div class="contain-center">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class='navbar-brand'>
+            <h2 style="padding-top: 10px;"><a href="{%url 'home'%}">BRAND</a></h2>
+          </div>
+          <!--
+          <form>
+            <div class="bg-light rounded rounded-pill shadow-sm">
+              <div class="input-group" style="padding-top: 5px;">
+                <div class="input-group-append">
+                  <button id="button-addon1" type="submit" class="btn btn-link text-dark"><i class="fa fa-search"></i></button>
+                </div>
+                <input type="search" placeholder="What're you searching for?" aria-describedby="button-addon1" class="form-control border-0 bg-light">
+              </div>
+            </div>
+          </form>-->
+
+
+    <form action="" class="search-bar">
+      <input type="search" name="search" pattern=".*\S.*" required>
+      <button class="search-btn" type="submit" >
+        <span>Search</span>
+      </button>
+    </form>
+          <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar-menu">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar-menu">
+            <ul class='navbar-nav ml-auto'>
+              <li class='nav-item navbar-icon-link' style="padding-top: 1.5px;">
+                  <a class='nav-link' href=''>
+                    <div class='user-icon'>
+                      <i class="fa fa-user fa-lg" aria-hidden="true"></i>
+                    </div>
+                </a> 
+              </li>
+              <li class='nav-item navbar-icon-link'>
+                <a class='nav-link' href=''>
+                  <div class='bag-icon'>
+                    <i class="fa fa-shopping-bag fa-lg" aria-hidden="true"></i>
+                  </div>
+                </a> 
+              </li>
+              <li class='nav-item navbar-icon-link'>
+                <a class='nav-link' href=''>
+                  <div class='more-icon' style="padding-top: 2px;">
+                    <i class="fa fa-bars fa-lg" aria-hidden="true"></i>   
+                  </div>
+                </a> 
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+
+    {%block content%}
+
+    {%endblock content%}
+    
+
+  <footer class="ftr">
+    <div class="contain-center">
+      <div class="row">
+        <div class="col">
+          <h6 class="list-head">ABOUT</h6>
+          <ul>
+            <li><a href="{%url 'about-us'%}" class="menu-list-link">About Us</a></li>
+            <li><a href="{%url 'careers'%}" class="menu-list-link">Careers</a></li>
+            <li><a href="{%url 'stories'%}" class="menu-list-link">Stories</a></li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <h6 class="list-head">POLICY</h6>
+          <ul>
+            <li><a href="{%url 'return-policy'%}" class="menu-list-link">Return Ploicy</a></li>
+            <li><a href="{%url 'terms-of-use'%}" class="menu-list-link">Terms Of Use</a></li>
+            <li><a href="{%url 'privacy'%}" class="menu-list-link">Privacy</a></li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <h6 class="list-head">SHOP BY</h6>
+          <ul>
+            <li><a href="#" class="menu-list-link">Men</a></li>
+            <li><a href="#" class="menu-list-link">Women</a></li>
+            <li><a href="#" class="menu-list-link">Kids</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h6 class="list-head">CONTACT US</h6>
+          <ul>
+            <li><a href="#" class="menu-list-link"><i class="fa fa-map-marker" aria-hidden="true"></i>  Allahabad, UP</a></li>
+            <li><a href="#" class="menu-list-link"><i class="fa fa-phone" aria-hidden="true"></i>  +91-983232999</a></li>
+            <li><a href="#" class="menu-list-link"><i class="fa fa-envelope" aria-hidden="true"></i>  Mail-Us</a></li>
+            <li>
+              <div class="social-icons">
+              <ul>
+                <li><a><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i></a></li>
+                <li><a><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a></li>
+                <li><a><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+              </ul>
+            </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="fixed-bottom">
+    <div class="contain-center">
+      <center class='bottom'>
+        &copy; 2020
+      </center>
+    </div>
+  </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </body>
+</html>
